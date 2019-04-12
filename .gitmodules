@@ -1,0 +1,3 @@
+[submodule "heartbeat_classification"]
+	path = heartbeat_classification
+	url = ./senior-server/heartbeat_classification
