@@ -1,0 +1,49 @@
+$header-padding: 15px 15px 0px 5px;
+
+
+ion-header{
+    padding: $header-padding;
+}
+
+h1{
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.4;
+}
+
+p{
+    font-family: "Open Sans";
+    font-weight: 700;
+    opacity: 0.8;
+    font-size: 25px;
+    line-height: none;
+    // text-align: right;
+}
+
+ion-button{
+    font-family: "Open Sans";
+    font-weight: 400;
+    display: inline-block;
+    width:250px;
+    margin: auto;
+    
+    
+    --background:  linear-gradient(to right top, #eb334f, #f56575, #fb8e99, #fcb3bc, #fad8dd);
+
+ }
+
+ div{
+    padding: 0px 50px 0px 35px;
+    // display: inline-block;
+}
+
+#button{
+    margin: 20px 10px 10px 10px;
+    display: inline-block;
+    // padding: 20px 10px 10px 10px;
+}
+
+#button-pos{
+    padding: 0px 50px 0px 45px;
+}

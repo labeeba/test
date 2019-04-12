@@ -1,0 +1,37 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <!-- positions the arrow at the start -->
+    <ion-buttons slot="start">
+      <ion-back-button color="medium"></ion-back-button>
+      <!-- <div text-center> -->
+      <p> Login </p>
+      <!-- </div> -->
+    </ion-buttons>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card no-border>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button id="login" (click)="openTabs()"> Login
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>

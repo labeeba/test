@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <!-- positions the arrow at the start -->
+    <ion-buttons slot="start">
+      <ion-back-button color="medium"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div text-left>
+    <p> Accelerometer </p>
+  </div>
+
+  <div full>
+    <h1> X: {{x}} </h1>
+  </div>
+  <div full>
+    <h1> Y: {{y}} </h1>
+  </div>
+  <div full>
+    <h1> Z: {{z}} </h1>
+  </div>
+  <div full>
+    <h1> Timestamp: {{timeStamp}} </h1>
+  </div>
+  <div id="button-pos">
+    <ion-button id="button" text-center (click)="start()"> Start </ion-button>
+    <ion-button id="button" text-center (click)="stop()"> Stop </ion-button>
+  </div>
+</ion-content>

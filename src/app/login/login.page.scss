@@ -1,0 +1,59 @@
+$header-padding: 15px 15px 0px 5px;
+// $content-padding: 30px;
+// $label-md-text-color-focused: black;
+// $label-wp-text-color-focused: black;
+
+
+ion-header{
+    padding: $header-padding;
+}
+
+div{
+    padding: 0px 50px 0px 25px;
+}
+p{
+    font-family: "Open Sans";
+    // opacity: 0.9;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: none;
+}
+
+ion-navbar{
+    display: inline-block;
+}
+
+ion-card ion-row{
+    padding:10px;
+    // float:right;
+    
+}
+ion-label{
+    opacity: 0.5;
+}
+ion-button{
+    font-family: "Open Sans";
+    font-weight: 400;
+    display: inline-block;
+    width:250px;
+    font-size: 12px;
+    
+    --background:  linear-gradient(to right top, #eb334f, #f56575, #fb8e99, #fcb3bc, #fad8dd);
+
+ }
+ion-card{
+    box-shadow: none !important;
+    margin-top: 15px;
+}
+
+ion-item {
+    margin:10px 20px 5px 20px;
+}
+
+
+//  ion-item{
+//      margin:20px;
+//  }
+// ion-label {
+//     --text-color-focused: #222;
+//   }

@@ -1,0 +1,7 @@
+{
+  "name": "AbleHeart",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

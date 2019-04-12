@@ -1,0 +1,30 @@
+// ion-icon{
+//     // --background: linear-gradient(to right top, #eb334f, #f56575, #fb8e99, #fcb3bc, #fad8dd);
+//     // color: #e50023;
+//     // color: #f56575;
+// }
+
+ion-label{
+    color: #000;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+ion-content{
+    font-family: "Open Sans";
+}
+
+.tab-selected{ ion-icon{ 
+    color: #eb334f;
+    opacity: 1;} 
+    ion-label{ 
+        color:  #eb334f;
+        // color: #000;
+        opacity: 0.8;
+
+    } 
+}
+
+ion-icon{
+    opacity: 0.6;
+}

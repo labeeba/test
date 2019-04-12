@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="my-tabs">
+    <div class="my-tabs-inner">
+      <!-- <ng-container *ngIf="tab === 'calendar'">
+        Your calendar content
+      </ng-container>
+
+      <ng-container *ngIf="tab === 'speakers'">
+        Your speakers content
+      </ng-container>
+
+      <ng-container *ngIf="tab === 'map'">
+        Your map content
+      </ng-container> -->
+    </div>
+
+
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/measure']">
+        <ion-icon name="pulse"></ion-icon>
+        <ion-label>Measure</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+
+      <ion-tab-button [routerLink]="['/activity']">
+        <ion-icon name="stats"></ion-icon>
+        <ion-label>Activity</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button [routerLink]="['/history']">
+        <ion-icon name="timer"></ion-icon>
+        <ion-label>History</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </div>
+
+
+  <!-- solution for tabs: https://github.com/ionic-team/ionic/issues/16796 -->
+
+</ion-content>
