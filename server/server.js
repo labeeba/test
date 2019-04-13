@@ -4,8 +4,11 @@ const request = require("request");
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
+var formidable = require('formidable');
 var app = express();
+
+const spawn = require ('child_process').spawn;
+const python
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,27 +20,28 @@ app.get('/', function (req, res) {
 });
 
 
-app.post('/predict', function (req, res) {
-    const param = req.body;
-    const file_name = param.file;
-    console.log(file_name);
+app.post('/predict', async (req, res) => {
+    try {
+        var form = new formidable.IncomingForm();
 
-
-    request({
-        uri: "http://localhost:5001/predict",
-        method: "POST",
-
-        formData: {
-            // file: fs.createReadStream(file_location)
-            file: fs.createReadStream(file_name)
-        }
-    }, function (error, response, body) {
-        var data = body;
-        res.send(data);
-        console.log(data);
-
-    });
-
+        //many many callbacks so sorry
+        form.parse(req).on('fileBegin', (name, file) => {
+            file.path = __dirname + '/heartbeat_classification/uploads/' + file.name;
+        }).on('file', (name, file) => {
+            console.log(`file saved to `, file.path)
+            console.log('calling python script')
+            
+            //pass the filename as an argument in here as the second item in the array
+            const script = spawn('python', [(__dirname+'/heartbeat_classification/logic.py')])
+            .stdout.on('data', (data)=>{
+                res.send(data);//send the analysis or whatever
+            });  
+        })
+        console.log('done, check the folder for the saved file')
+    } catch (err) {
+        console.log(err)
+        res.json({ error: err })
+    }
 });
 
 
